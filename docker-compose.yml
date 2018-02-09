@@ -1,0 +1,27 @@
+version: '2'
+services:
+  db:
+    image: mysql
+    ports:
+      - "3307:3306"
+    volumes:
+      - .docker/storage/database:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=secret
+  apache:
+    build: .
+    volumes:
+      - ./magento:/var/www
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+
+    # environment: 
+    #   - REDIS_PROVIDER=SIDEKIQ_REDIS_URL
+    #   - SIDEKIQ_REDIS_URL=redis://redis:6379
+    #   - ADAPTER=postgresql
+    #   - DATABASE_NAME=postgres
+    #   - DATABASE_USERNAME=postgres
+    #   - DATABASE_HOST=db
+    #   - DATABASE_PASSWORD=
