@@ -20,7 +20,7 @@ return array (
       'default' => 
       array (
         'host' => 'db',
-        'dbname' => 'chanel',
+        'dbname' => 'magento',
         'username' => 'root',
         'password' => 'secret',
         'model' => 'mysql4',
