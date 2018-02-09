@@ -1,6 +1,7 @@
 # Running the example:
 
-Place your database export in the root directory, named `magento.sql`. 
+### Important!
+Place your database export in the root directory, named `magento.sql`. This needs to be present before you proceed with the steps below.
 
 ```bash
 git clone https://github.com/toshitech/magento-issue-repro magento-repro && \
