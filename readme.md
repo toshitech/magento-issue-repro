@@ -20,4 +20,4 @@ docker-compose exec apache php bin/magento setup:upgrade
 docker-compose exec db bash -c "mysql -u root -psecret magento -e \"UPDATE core_config_data SET value='http://localhost:8080' WHERE  path='web/unsecure/base_url'\""
 ```
 
-If you need to access the database it's published on port 3307.
+The database is exposed via port 3307.
